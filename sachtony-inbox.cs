@@ -16,7 +16,7 @@ namespace ConsoleApplication2
                 Credentials = new NetworkCredential("ddb78733a6d06a", "5a5d2ffabf5e0a"),
                 EnableSsl = true
             };
-            client.Send("from@example.com", "to@example.com", "Hello world", "testbody");
+            client.Send("from@sachtony.com", "to@sachtony.com", "Hello world", "testbody");
             Console.WriteLine("Sent");
             Console.ReadLine();
         }
