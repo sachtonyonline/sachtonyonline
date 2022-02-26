@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div id="logosachtony"></div>
+<div id="logosachtony"></div>  
+
+<img id="logosachtony" width="auto" height="auto" src="sachtony.scale-100.png" alt="Logo">
 
 <script>
 // Create a new Set
@@ -17,6 +19,19 @@ Assets.add("sachtony.scale-400.png");
 
 // Display set.size
 document.getElementById("logosachtony").innerHTML = Assets.size;
+</script>
+
+<canvas id="logosachtony" width="auto" height="auto"
+style="border:1px solid #d3d3d3;">
+</canvas>
+
+<script>
+window.onload = function() {
+    var canvas = document.getElementById("logosachtony");
+    var ctx = canvas.getContext("3d");
+    var img = document.getElementById("logosachtony");
+   ctx.drawImage(img, 10, 10);
+};
 </script>
 
 </body>
