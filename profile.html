@@ -9,35 +9,52 @@
     <script src="https://kit.fontawesome.com/6380ada59c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="0">
-    <p>#0</p>
-  </div>
-  <div id="1">
-   <p>#1</p>
-  </div>
-  <div id="2">
-   <p>#2</p>
-  </div>
-  <div id="3">
-   <p>#3</p>
-  </div>
-  <div id="4">
-   <p>#4</p>
-  </div>
-  <div id="5">
-   <p>#5</p>
-  </div>
-  <div id="6">
-   <p>#6</p>
-  </div>
-  <div id="7">
-   <p>#7</p>
-  </div>
-  <div id="8">
-   <p>#8</p>
-  </div>
-  <div id="9">
-   <p>#9</p>
-  </div>
+    <div ng-app="sachtony" id="0">
+       <p>#0</p>
+    </div>
+    
+    <div ng-app="sachtony" id="1">
+       <p>#1</p>
+    </div>
+    
+    <div ng-app="sachtony" id="2">
+       <p>#2</p>
+    </div>
+    
+    <div ng-app="sachtony" id="3">
+       <p>#3</p>
+    </div>
+    
+    <div ng-app="sachtony" id="4">
+       <p>#4</p>
+    </div>
+    
+    <div ng-app="sachtony" id="5">
+       <p>#5</p>
+    </div>
+    
+    <div ng-app="sachtony" id="6">
+       <p>#6</p>
+    </div>
+    
+    <div ng-app="sachtony" id="7">
+       <p>#7</p>
+    </div>
+    
+    <div ng-app="sachtony" id="8">
+       <p>#8</p>
+    </div>
+    
+    <div ng-app="sachtony" id="9">
+       <p>#9</p>
+    </div>
+    
+    <script>
+        var app = angular.module('sachtony', []);
+        app.controller('customersCtrl', function($scope, $http) {
+            $http.get("customers.php")
+            .then(function (response) {$scope.names = response.data.records;});
+        });
+     </script>
 </body>
 </html>
